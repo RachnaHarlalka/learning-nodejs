@@ -1,14 +1,23 @@
-// function sum(a,b){
-//     return console.log(a+b);
-// }
-// function sub(a,b){
-//     return console.log(a-b);
-// }
 
-// module.export = sum
 
-const _ = require('underscore')
+const CurrentDay = () => {
+    let now = new Date();
+    var month = new Array();
+    month[0] = "January";
+    month[1] = "February";
+    month[2] = "March";
+    month[3] = "April";
+    month[4] = "May";
+    month[5] = "June";
+    month[6] = "July";
+    month[7] = "August";
+    month[8] = "September";
+    month[9] = "October";
+    month[10] = "November";
+    month[11] = "December";
 
-const result = _.contains([2,6,10], 6)
+    console.log(`${now.getDate()}  ${month[now.getMonth()]}  ${now.getFullYear()}`)
+}
 
-console.log(result)
+
+module.exports.CurrentDay = CurrentDay
