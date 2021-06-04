@@ -1,1 +1,0 @@
-This library can be used to see the current time and to get the ip addrees of your system
