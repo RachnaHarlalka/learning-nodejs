@@ -57,7 +57,7 @@ module.exports.getProductById = async (id) => {
     }
 }
 
-module.exports.updateProduct = async (id) => {
+module.exports.updateProduct = async ({ id, updateInfo }) => {
     try {
         checkObjectId(id);
         let products = await Product.findOneAndUpdate(
@@ -77,7 +77,8 @@ module.exports.updateProduct = async (id) => {
     }
 }
 
-module.exports.deleteProduct = async (id) => {
+
+module.exports.deleteProduct = async ({id}) => {
     try {
         checkObjectId(id);
         let products = await Product.findByIdAndDelete(id);

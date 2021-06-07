@@ -23,6 +23,7 @@ router.put(
     joiSchemaValidation.validateBody(productSchema.updateProductSchema),
      productController.updateProduct
     );
+    
 
 router.get(
     '/:id',

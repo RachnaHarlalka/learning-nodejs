@@ -37,7 +37,7 @@ module.exports.login = async ({ email, password }) => {
             throw new Error(constants.userMessage.USER_NOT_FOUND); // Define this
         }
 
-        // Validate password using bcrypt method using 
+        //  password using bcrypt method using 
         const isValid = await bcrypt.compare(password, user.password);
 
         // if password is not valid throw error
