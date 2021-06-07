@@ -4,6 +4,7 @@ const userController = require('../controller/userController');
 const joiSchemaValidation = require('../middleware/joiSchemaValidation');
 const userSchema = require('../validateSchema/userSchema');
 
-router.post('/signup', joiSchemaValidation.validateBody(userSchema.signUp), userController.signUp);
+router.post('/signup', joiSchemaValidation.validateBody(userSchema.signup), userController.signup);
+
 
 module.exports = router;

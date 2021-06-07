@@ -3,7 +3,7 @@ const constants = require('../constants/constants')
 const bcrypt = require('bcrypt');
 const { formatMongoData } = require('../helper/dbHelper');
 
-module.exports.signUp = async ({ email, password }) => {
+module.exports.signup = async ({ email, password }) => {
     try{
         const user = await User.findOne({ email }); // using es6 shortcut we can skip value if key value name is same
         // If user already exist with given email throw error else signup

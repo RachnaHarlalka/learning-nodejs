@@ -1,16 +1,16 @@
 const userService = require('../service/userService')
 const constants = require('../constants/constants')
 
-module.exports.signUp = async (req, res) => {
+module.exports.signup = async (req, res) => {
 
     let response = {};
     try {
-        const responseFromService = await userService.signUp(req.body);
+        const responseFromService = await userService.signup(req.body);
         response.status = 200;
         response.message = constants.productMessage.PRODUCT_CREATED;
         response.body = responseFromService
     } catch (err) {
-        console.log('User Controller: signUp()=>', err);
+        console.log('User Controller: signup()=>', err);
         response.status = 400;
         response.message = err.message;
         response.body = {};
@@ -19,11 +19,11 @@ module.exports.signUp = async (req, res) => {
     return res.status(response.status).send(response);
 }
 
-module.exports.logIn = async (req, res) => {
+module.exports.login = async (req, res) => {
 
     let response = {};
     try {
-        const responseFromService = await userService.logIn(req.body);
+        const responseFromService = await userService.login(req.body);
         response.status = 200;
         response.message = constants.productMessage.LOGIN_SUCCESS;
         response.body = responseFromService
